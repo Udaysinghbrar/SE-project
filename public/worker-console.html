@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worker Console - Stitch Perfect</title>
+  <!-- Bootstrap Icons for clean SVG graphics -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body style="margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; background-color: #f4f9fd; height: 100vh; display: flex; overflow: hidden; color: #334155;">
+
+  <!-- Left Sidebar (White) -->
+  <aside style="width: 280px; background-color: #ffffff; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid #e0f2fe; box-shadow: 2px 0 10px rgba(0,0,0,0.02); flex-shrink: 0; z-index: 10;">
+    
+    <div style="width: 100%;">
+      <!-- Brand / Logo Area -->
+      <div style="padding: 24px; border-bottom: 1px solid #e0f2fe; display: flex; align-items: center; gap: 12px;">
+        <div style="width: 32px; height: 32px; background-color: #0ea5e9; color: #ffffff; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;">✂</div>
+        <span style="font-size: 20px; font-weight: 700; color: #0f172a; letter-spacing: 0.5px;">Stitch Perfect</span>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav style="display: flex; flex-direction: column; padding: 12px 0;">
+        <a href="customer-enrolment.html" style="display: flex; align-items: center; gap: 14px; padding: 16px 24px; text-decoration: none; color: #475569; font-size: 15px; font-weight: 500; border-left: 4px solid transparent; transition: 0.2s;" onmouseover="this.style.backgroundColor='#f0f9ff'; this.style.color='#0284c7'; this.style.borderLeft='4px solid #0ea5e9';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#475569'; this.style.borderLeft='4px solid transparent';">
+          <i class="bi bi-clipboard-check" style="font-size: 20px;"></i>
+          <span>Customer Enrolment</span>
+        </a>
+
+        <a href="measurements.html" style="display: flex; align-items: center; gap: 14px; padding: 16px 24px; text-decoration: none; color: #475569; font-size: 15px; font-weight: 500; border-left: 4px solid transparent; transition: 0.2s;" onmouseover="this.style.backgroundColor='#f0f9ff'; this.style.color='#0284c7'; this.style.borderLeft='4px solid #0ea5e9';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#475569'; this.style.borderLeft='4px solid transparent';">
+          <i class="bi bi-tape" style="font-size: 20px;"></i>
+          <span>Measurements</span>
+        </a>
+
+        <a href="measurement-explorer.html" style="display: flex; align-items: center; gap: 14px; padding: 16px 24px; text-decoration: none; color: #475569; font-size: 15px; font-weight: 500; border-left: 4px solid transparent; transition: 0.2s;" onmouseover="this.style.backgroundColor='#f0f9ff'; this.style.color='#0284c7'; this.style.borderLeft='4px solid #0ea5e9';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#475569'; this.style.borderLeft='4px solid transparent';">
+          <i class="bi bi-search" style="font-size: 20px;"></i>
+          <span>Measurement Explorer</span>
+        </a>
+
+        <!-- Active Link -->
+        <a href="worker-console.html" style="display: flex; align-items: center; gap: 14px; padding: 16px 24px; text-decoration: none; color: #0284c7; font-size: 15px; font-weight: 600; background-color: #f0f9ff; border-left: 4px solid #0ea5e9;">
+          <i class="bi bi-person-gear" style="font-size: 20px;"></i>
+          <span>Worker Console</span>
+        </a>
+
+        <a href="worker-list.html" style="display: flex; align-items: center; gap: 14px; padding: 16px 24px; text-decoration: none; color: #475569; font-size: 15px; font-weight: 500; border-left: 4px solid transparent; transition: 0.2s;" onmouseover="this.style.backgroundColor='#f0f9ff'; this.style.color='#0284c7'; this.style.borderLeft='4px solid #0ea5e9';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#475569'; this.style.borderLeft='4px solid transparent';">
+          <i class="bi bi-people" style="font-size: 20px;"></i>
+          <span>Worker List</span>
+        </a>
+
+        <a href="ready-products.html" style="display: flex; align-items: center; gap: 14px; padding: 16px 24px; text-decoration: none; color: #475569; font-size: 15px; font-weight: 500; border-left: 4px solid transparent; transition: 0.2s;" onmouseover="this.style.backgroundColor='#f0f9ff'; this.style.color='#0284c7'; this.style.borderLeft='4px solid #0ea5e9';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#475569'; this.style.borderLeft='4px solid transparent';">
+          <i class="bi bi-card-checklist" style="font-size: 20px;"></i>
+          <span>Ready Products</span>
+        </a>
+
+        <a href="order-delivery.html" style="display: flex; align-items: center; gap: 14px; padding: 16px 24px; text-decoration: none; color: #475569; font-size: 15px; font-weight: 500; border-left: 4px solid transparent; transition: 0.2s;" onmouseover="this.style.backgroundColor='#f0f9ff'; this.style.color='#0284c7'; this.style.borderLeft='4px solid #0ea5e9';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#475569'; this.style.borderLeft='4px solid transparent';">
+          <i class="bi bi-box-seam" style="font-size: 20px;"></i>
+          <span>Order Delivery</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Bottom Actions (Info / Logout) -->
+    <div style="display: flex; align-items: center; justify-content: space-around; padding: 24px; border-top: 1px solid #e0f2fe;">
+      <a href="about.html" title="About" style="color: #94a3b8; text-decoration: none; transition: 0.2s;" onmouseover="this.style.color='#0284c7'" onmouseout="this.style.color='#94a3b8'">
+        <i class="bi bi-info-circle" style="font-size: 24px;"></i>
+      </a>
+      <a href="login.html" title="Logout" style="color: #94a3b8; text-decoration: none; transition: 0.2s;" onmouseover="this.style.color='#ef4444'" onmouseout="this.style.color='#94a3b8'">
+        <i class="bi bi-box-arrow-right" style="font-size: 24px;"></i>
+      </a>
+    </div>
+
+  </aside>
+
+  <!-- Main Canvas Area -->
+  <main style="flex: 1; display: flex; flex-direction: column; padding: 40px 50px; position: relative; overflow-y: auto; align-items: center;">
+    
+    <!-- Top Header -->
+    <header style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 800px; border-bottom: 1px solid #e0f2fe; padding-bottom: 20px; margin-bottom: 30px;">
+      <h1 style="margin: 0; font-size: 32px; font-weight: 600; color: #0f172a; letter-spacing: 0.5px;">Worker Console</h1>
+      
+      <div style="display: flex; align-items: center; gap: 12px; border-left: 2px solid #e0f2fe; padding-left: 24px;">
+        <div style="width: 40px; height: 40px; background-color: #0ea5e9; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; box-shadow: 0 2px 6px rgba(14,165,233,0.3);">
+          <i class="bi bi-person-fill"></i>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <span style="font-size: 12px; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Welcome</span>
+          <!-- ID placed here for dynamic updates -->
+          <span id="login-name" style="font-size: 16px; font-weight: 700; color: #0f172a;">xxx</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Console Form Card -->
+    <div style="background-color: #ffffff; border: 1px solid #bae6fd; border-radius: 12px; padding: 40px; box-shadow: 0 4px 12px rgba(186,230,253,0.3); width: 100%; max-width: 800px;">
+      
+      <form id="worker-console-form">
+        
+        <!-- Row 1: Worker Name -->
+        <div style="margin-bottom: 24px;">
+          <label for="workerName" style="display: block; font-size: 16px; font-weight: 500; color: #334155; margin-bottom: 8px;">Worker Name</label>
+          <input type="text" id="workerName" placeholder="Worker Name" style="width: 100%; max-width: 380px; height: 42px; border-radius: 6px; border: 1px solid #cbd5e1; padding: 0 16px; font-size: 15px; outline: none; transition: 0.2s; box-sizing: border-box;" onfocus="this.style.borderColor='#0ea5e9'; this.style.boxShadow='0 0 0 3px rgba(14,165,233,0.1)'" onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+        </div>
+
+        <!-- Row 2: Address & Mobile Number -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px;">
+          <div>
+            <label for="address" style="display: block; font-size: 16px; font-weight: 500; color: #334155; margin-bottom: 8px;">Address</label>
+            <input type="text" id="address" placeholder="Address" style="width: 100%; height: 42px; border-radius: 6px; border: 1px solid #cbd5e1; padding: 0 16px; font-size: 15px; outline: none; transition: 0.2s; box-sizing: border-box;" onfocus="this.style.borderColor='#0ea5e9'; this.style.boxShadow='0 0 0 3px rgba(14,165,233,0.1)'" onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+          </div>
+          <div>
+            <label for="mobile" style="display: block; font-size: 16px; font-weight: 500; color: #334155; margin-bottom: 8px;">Mobile Number</label>
+            <input type="tel" id="mobile" placeholder="Mobile Number" style="width: 100%; height: 42px; border-radius: 6px; border: 1px solid #cbd5e1; padding: 0 16px; font-size: 15px; outline: none; transition: 0.2s; box-sizing: border-box;" onfocus="this.style.borderColor='#0ea5e9'; this.style.boxShadow='0 0 0 3px rgba(14,165,233,0.1)'" onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+          </div>
+        </div>
+
+        <!-- Row 3: Specialization (Inline layout) -->
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 36px;">
+          <label for="specialization" style="font-size: 16px; font-weight: 500; color: #334155; white-space: nowrap;">Specialization</label>
+          <input type="text" id="specialization" placeholder="Specialization" style="flex: 1; height: 42px; border-radius: 6px; border: 1px solid #cbd5e1; padding: 0 16px; font-size: 15px; outline: none; transition: 0.2s;" onfocus="this.style.borderColor='#0ea5e9'; this.style.boxShadow='0 0 0 3px rgba(14,165,233,0.1)'" onblur="this.style.borderColor='#cbd5e1'; this.style.boxShadow='none'">
+          
+          <button type="button" style="background-color: #0ea5e9; color: #ffffff; border: none; border-radius: 6px; height: 42px; padding: 0 28px; font-size: 15px; font-weight: 600; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(14,165,233,0.2);" onmouseover="this.style.backgroundColor='#0284c7'" onmouseout="this.style.backgroundColor='#0ea5e9'" onclick="document.getElementById('specialization').value=''">
+            Clear
+          </button>
+        </div>
+
+        <!-- Row 4: Photo Selection Box -->
+        <div style="display: flex; align-items: center; gap: 24px; margin-bottom: 40px;">
+          <!-- Empty Photo Box -->
+          <div style="width: 200px; height: 200px; border: 2px dashed #cbd5e1; border-radius: 8px; background-color: #f8fafc; display: flex; flex-direction: column; justify-content: center; align-items: center; cursor: pointer; color: #94a3b8; font-size: 48px; transition: 0.2s;" onmouseover="this.style.borderColor='#0ea5e9'; this.style.color='#0ea5e9'; this.style.backgroundColor='#f0f9ff'" onmouseout="this.style.borderColor='#cbd5e1'; this.style.color='#94a3b8'; this.style.backgroundColor='#f8fafc'">
+            <i class="bi bi-person-badge"></i>
+          </div>
+          <span style="font-size: 17px; font-weight: 500; color: #475569;">Double Click To Select</span>
+        </div>
+
+        <!-- Row 5: Action Buttons -->
+        <div style="display: flex; justify-content: center; gap: 24px; padding-top: 32px; border-top: 1px solid #e2e8f0;">
+          <button type="submit" style="background-color: #0ea5e9; color: #ffffff; border: none; border-radius: 6px; height: 46px; padding: 0 48px; font-size: 16px; font-weight: 600; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(14,165,233,0.3);" onmouseover="this.style.backgroundColor='#0284c7'; this.style.transform='translateY(-1px)'" onmouseout="this.style.backgroundColor='#0ea5e9'; this.style.transform='translateY(0)'">
+            Save
+          </button>
+          
+          <button type="reset" style="background-color: #0ea5e9; color: #ffffff; border: none; border-radius: 6px; height: 46px; padding: 0 48px; font-size: 16px; font-weight: 600; cursor: pointer; transition: 0.2s; box-shadow: 0 2px 4px rgba(14,165,233,0.3);" onmouseover="this.style.backgroundColor='#0284c7'; this.style.transform='translateY(-1px)'" onmouseout="this.style.backgroundColor='#0ea5e9'; this.style.transform='translateY(0)'">
+            New
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+</body>
+</html>
