@@ -2,7 +2,7 @@ StitchPerfect 👔
 
 Revolutionizing Tailor Shops Through Digital Management & Automation
 
-StitchPerfect is a digital management platform designed specifically for tailor shops and boutiques. It helps digitize customer measurements, manage orders, coordinate workers, track inventory, manage design references, and provide customers with order updates.
+StitchPerfect is a digital management platform designed specifically for tailor shops and boutiques. It helps digitize customer measurements, manage orders, coordinate workers, manage design references, and provide customers with order updates.
 
 The goal is to reduce measurement errors, improve workflow efficiency, shorten delivery times, and provide better operational visibility to tailor shops.
 
@@ -16,7 +16,6 @@ The goal is to reduce measurement errors, improve workflow efficiency, shorten d
 * Place tailoring orders
 * Track order status
 * View design previews
-* Make payments
 * Easily reorder using saved measurements
 
 📦 Order Management
@@ -45,7 +44,6 @@ The goal is to reduce measurement errors, improve workflow efficiency, shorten d
 
 * Manage orders
 * Manage workers
-* Manage inventory
 * Assign tasks
 * Monitor delivery status
 * View reports and analytics
@@ -57,20 +55,6 @@ The goal is to reduce measurement errors, improve workflow efficiency, shorten d
 * Store style references
 * Manage design previews
 * Cloud-based image storage using Cloudinary
-
-📊 Inventory Management
-
-* Track fabric and material stock
-* Connect inventory with active orders
-* Monitor stock levels
-* Improve material planning
-
-💳 Customer Communication & Payments
-
-* Customer order updates
-* Status notifications
-* Reminders
-* Payment collection
 
 ⸻
 
@@ -85,10 +69,9 @@ This can result in:
 * Long order turnaround times
 * Difficulty tracking stitching progress
 * Poor staff coordination
-* Limited inventory visibility
 * Lack of customer order tracking
 
-StitchPerfect addresses these problems by providing a centralized digital platform for managing the complete tailoring workflow.
+StitchPerfect addresses these problems by providing a centralized digital platform for managing the tailoring workflow.
 
 ⸻
 
@@ -104,13 +87,11 @@ Worker Task Management
         ↓
 Media & Design Management
         ↓
-Inventory Tracking
-        ↓
-Payment & Customer Communication
+Customer Communication
         ↓
 Reports & Analytics
 
-This creates a single digital system connecting customers, workers, administrators, and suppliers.
+This creates a single digital system connecting customers, workers, and administrators.
 
 ⸻
 
@@ -122,7 +103,6 @@ Customer
 * Submit measurements
 * Track orders
 * View design previews
-* Make payments
 
 Worker
 
@@ -134,7 +114,6 @@ Worker
 Administrator
 
 * Manage orders
-* Manage inventory
 * Manage workers
 * Assign tasks
 * View analytics
@@ -143,8 +122,6 @@ Administrator
 ⸻
 
 🏗️ System Architecture
-
-The system follows a centralized management approach:
 
                     ┌─────────────┐
                     │  Customer   │
@@ -157,32 +134,29 @@ The system follows a centralized management approach:
               │  Order Management      │
               │  Measurements          │
               │  Worker Management     │
-              │  Inventory             │
               │  Media Management      │
-              │  Payments              │
+              │  Customer Communication│
               └───────────┬────────────┘
                           │
-            ┌─────────────┼─────────────┐
-            ▼             ▼             ▼
-        Workers        Admin        Suppliers
+                ┌─────────┴─────────┐
+                ▼                   ▼
+             Workers              Admin
 
 ⸻
 
 🔄 Main System Processes
 
-The Level-1 DFD divides StitchPerfect into six major processes:
+The Level-1 DFD divides StitchPerfect into the following major processes:
 
 1. Order Intake & Measurement
 2. Worker Console
 3. Admin Panel
 4. Media Management
-5. Inventory Tracking
-6. Customer Communication & Payments
+5. Customer Communication
 
 The main data stores are:
 
 * Measurement & Order Database
-* Inventory Database
 * Worker / Admin Database
 
 ⸻
@@ -236,7 +210,6 @@ customerlist
      │
      │ 1
      │
-     │
      │ *
 mesurement
      │
@@ -251,17 +224,17 @@ A customer can have multiple orders, and a worker can be assigned to multiple or
 
 🔐 Access & Management
 
-StitchPerfect supports role-based access for different users of the tailoring ecosystem.
+StitchPerfect supports role-based access for different users.
 
 Customer
    ↓
-Orders / Measurements / Payments
+Orders / Measurements / Design Previews
 Worker
    ↓
 Task Queue / Order Status / Proof-of-Work
 Admin
    ↓
-Orders / Workers / Inventory / Analytics
+Orders / Workers / Analytics
 
 ⸻
 
@@ -278,7 +251,6 @@ For Tailors & Workers
 For Shop Owners
 
 * Complete operational visibility
-* Inventory control
 * Worker management
 * Order tracking
 * Analytics and reporting
@@ -301,11 +273,8 @@ StitchPerfect can be expanded to support:
 
 * Multi-shop management
 * Advanced analytics
-* Demand forecasting
-* Supplier integration
-* Electronic purchase orders
 * Automated customer notifications
-* More advanced payment integrations
+* More advanced design preview features
 * Mobile application support
 
 ⸻
