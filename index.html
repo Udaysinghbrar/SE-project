@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StitchPerfect - Digital Tailor Shop Management System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            color: #333;
+            background: #f7f7f7;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 25px 8%;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-bottom: 0;
+            color: #ddd;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 25px;
+        }
+
+        section {
+            background: white;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #b33a3a;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #444;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        .architecture {
+            background: #f4f4f4;
+            padding: 20px;
+            white-space: pre-wrap;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tech-table th,
+        .tech-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .tech-table th {
+            background: #333;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>StitchPerfect 👔</h1>
+    <p>Revolutionizing Tailor Shops Through Digital Management & Automation</p>
+</header>
+
+<main>
+
+<section>
+    <h2>Project Overview</h2>
+
+    <p>
+        StitchPerfect is a digital management platform designed specifically
+        for tailor shops and boutiques. It helps digitize customer measurements,
+        manage orders, coordinate workers, manage design references, and provide
+        customers with order updates.
+    </p>
+
+    <p>
+        The goal is to reduce measurement errors, improve workflow efficiency,
+        shorten delivery times, and provide better operational visibility to
+        tailor shops.
+    </p>
+</section>
+
+<section>
+    <h2>🚀 Features</h2>
+
+    <h3>👤 Customer Management</h3>
+    <ul>
+        <li>Store customer measurement profiles</li>
+        <li>Place tailoring orders</li>
+        <li>Track order status</li>
+        <li>View design previews</li>
+        <li>Easily reorder using saved measurements</li>
+    </ul>
+
+    <h3>📦 Order Management</h3>
+    <ul>
+        <li>Digital order intake</li>
+        <li>Order and measurement management</li>
+        <li>Task cards for workers</li>
+        <li>Track orders throughout the stitching process</li>
+        <li>Monitor delivery status</li>
+    </ul>
+
+    <h3>📏 Measurement Explorer</h3>
+    <ul>
+        <li>Centralized measurement storage</li>
+        <li>Searchable customer measurement profiles</li>
+        <li>Faster repeat orders</li>
+        <li>Reduced measurement errors</li>
+    </ul>
+
+    <h3>👷 Worker Console</h3>
+    <ul>
+        <li>View assigned tasks</li>
+        <li>Manage task queues</li>
+        <li>Update order status</li>
+        <li>Upload proof-of-work</li>
+    </ul>
+
+    <h3>🛠️ Admin Panel</h3>
+    <ul>
+        <li>Manage orders and workers</li>
+        <li>Assign tasks</li>
+        <li>Monitor delivery status</li>
+        <li>View reports and analytics</li>
+        <li>Role-based access support</li>
+    </ul>
+</section>
+
+<section>
+    <h2>🎯 Problem Statement</h2>
+
+    <p>
+        Traditional tailor shops often rely on manual and paper-based processes
+        for recording measurements, tracking orders, and coordinating workers.
+    </p>
+
+    <ul>
+        <li>Measurement mistakes</li>
+        <li>Lost or misread records</li>
+        <li>Long order turnaround times</li>
+        <li>Difficulty tracking stitching progress</li>
+        <li>Poor staff coordination</li>
+        <li>Lack of customer order tracking</li>
+    </ul>
+</section>
+
+<section>
+    <h2>💡 Solution</h2>
+
+    <p>
+        StitchPerfect creates a single digital system connecting customers,
+        workers, and administrators.
+    </p>
+
+    <p>
+        Customer Management → Order & Measurement Management →
+        Worker Task Management → Media & Design Management →
+        Customer Communication → Reports & Analytics
+    </p>
+</section>
+
+<section>
+    <h2>👥 User Roles</h2>
+
+    <h3>Customer</h3>
+    <ul>
+        <li>Place orders</li>
+        <li>Submit measurements</li>
+        <li>Track orders</li>
+        <li>View design previews</li>
+    </ul>
+
+    <h3>Worker</h3>
+    <ul>
+        <li>View task queue</li>
+        <li>Receive assigned orders</li>
+        <li>Update order status</li>
+        <li>Upload proof-of-work</li>
+    </ul>
+
+    <h3>Administrator</h3>
+    <ul>
+        <li>Manage orders</li>
+        <li>Manage workers</li>
+        <li>Assign tasks</li>
+        <li>View analytics</li>
+    </ul>
+</section>
+
+<section>
+    <h2>🏗️ System Architecture</h2>
+
+    <div class="architecture">
+                ┌─────────────┐
+                │  Customer   │
+                └──────┬──────┘
+                       │
+                       ▼
+          ┌────────────────────────┐
+          │     StitchPerfect      │
+          │                        │
+          │  Order Management      │
+          │  Measurements          │
+          │  Worker Management     │
+          │  Media Management      │
+          │  Customer Communication│
+          └───────────┬────────────┘
+                      │
+            ┌─────────┴─────────┐
+            ▼                   ▼
+         Workers              Admin
+    </div>
+</section>
+
+<section>
+    <h2>🛠️ Technology Stack</h2>
+
+    <table class="tech-table">
+        <tr>
+            <th>Technology</th>
+            <th>Purpose</th>
+        </tr>
+
+        <tr>
+            <td>Bootstrap</td>
+            <td>Responsive front-end UI</td>
+        </tr>
+
+        <tr>
+            <td>Node.js</td>
+            <td>Backend server</td>
+        </tr>
+
+        <tr>
+            <td>jQuery</td>
+            <td>Front-end interactivity</td>
+        </tr>
+
+        <tr>
+            <td>Cloudinary</td>
+            <td>Media and image management</td>
+        </tr>
+
+        <tr>
+            <td>Aiven</td>
+            <td>Managed cloud database infrastructure</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>🗄️ Database Design</h2>
+
+    <h3>Tables</h3>
+
+    <ul>
+        <li><b>customerlist</b> — Stores customer information</li>
+        <li><b>workerlist</b> — Stores worker information</li>
+        <li><b>mesurement</b> — Stores order and measurement information</li>
+        <li><b>pass</b> — Stores administrator login credentials</li>
+    </ul>
+
+    <h3>Relationships</h3>
+
+    <p>
+        A customer can have multiple orders, and a worker can be assigned
+        to multiple orders.
+    </p>
+</section>
+
+<section>
+    <h2>📈 Benefits</h2>
+
+    <h3>For Tailors & Workers</h3>
+    <ul>
+        <li>Clear task queues</li>
+        <li>Easier order management</li>
+        <li>Saved customer measurements</li>
+        <li>Fewer measurement corrections</li>
+    </ul>
+
+    <h3>For Shop Owners</h3>
+    <ul>
+        <li>Complete operational visibility</li>
+        <li>Worker management</li>
+        <li>Order tracking</li>
+        <li>Analytics and reporting</li>
+    </ul>
+
+    <h3>For Customers</h3>
+    <ul>
+        <li>Order tracking</li>
+        <li>Design previews</li>
+        <li>Saved measurements</li>
+        <li>Faster repeat orders</li>
+    </ul>
+</section>
+
+<section>
+    <h2>🔮 Future Scope</h2>
+
+    <ul>
+        <li>Multi-shop management</li>
+        <li>Advanced analytics</li>
+        <li>Automated customer notifications</li>
+        <li>Advanced design preview features</li>
+        <li>Mobile application support</li>
+    </ul>
+</section>
+
+<section>
+    <h2>👨‍💻 Author</h2>
+
+    <p><b>Uday Singh</b></p>
+    <p>Roll No.: 1024160031</p>
+</section>
+
+<section>
+    <h2>📌 Project Goal</h2>
+
+    <p>
+        Digitize tailor shop operations, standardize measurements, improve
+        order tracking, and provide better visibility to customers, workers,
+        and shop owners.
+    </p>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 StitchPerfect | Digital Tailor Shop Management System</p>
+</footer>
+
+</body>
+</html>
