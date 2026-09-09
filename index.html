@@ -1,270 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+<section>
+    <h2>Key Features</h2>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="grid">
 
-    <title>StitchPerfect | Digital Tailor Shop Management</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f5f6f8;
-            color: #2d2d2d;
-            line-height: 1.7;
-        }
-
-        header {
-            background: #1f2933;
-            color: white;
-            padding: 60px 20px;
-        }
-
-        .header-content,
-        main {
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 42px;
-        }
-
-        header p {
-            margin-top: 10px;
-            font-size: 18px;
-            color: #d1d5db;
-        }
-
-        main {
-            padding: 35px 20px;
-        }
-
-        section {
-            background: white;
-            padding: 30px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-            border: 1px solid #e5e7eb;
-        }
-
-        h2 {
-            margin-top: 0;
-            color: #1f2933;
-            font-size: 26px;
-        }
-
-        h3 {
-            color: #374151;
-            margin-bottom: 8px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: #f8fafc;
-            padding: 20px;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        footer {
-            background: #1f2933;
-            color: #cbd5e1;
-            text-align: center;
-            padding: 25px;
-            margin-top: 40px;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 32px;
-            }
-
-            section {
-                padding: 20px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <header>
-        <div class="header-content">
-            <h1>StitchPerfect</h1>
-            <p>Digital Tailor Shop Management System</p>
+        <div class="card">
+            <h3>Customer Management</h3>
+            <p>
+                Store customer details and measurements for easier
+                management and repeat orders.
+            </p>
         </div>
-    </header>
 
-    <main>
-
-        <section>
-            <h2>Project Overview</h2>
-
+        <div class="card">
+            <h3>Order Management</h3>
             <p>
-                StitchPerfect is a digital management system designed for tailor
-                shops and boutiques. The project helps manage customer details,
-                body measurements, tailoring orders, workers, and order progress
-                through a single platform.
+                Create orders, store measurements, and track the progress
+                of tailoring work.
             </p>
+        </div>
 
+        <div class="card">
+            <h3>Worker Management</h3>
             <p>
-                Many traditional tailor shops still depend on paper records for
-                measurements and order management. StitchPerfect aims to reduce
-                the problems caused by lost records, measurement mistakes, and
-                difficulties in tracking orders and worker tasks.
+                Assign orders to workers and allow them to update their
+                task and order status.
             </p>
-        </section>
+        </div>
 
-        <section>
-            <h2>Key Features</h2>
-
-            <div class="grid">
-
-                <div class="card">
-                    <h3>Customer Management</h3>
-                    <p>
-                        Store customer details and measurements for easier
-                        management and repeat orders.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Order Management</h3>
-                    <p>
-                        Create orders, store measurements, and track the progress
-                        of tailoring work.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Worker Management</h3>
-                    <p>
-                        Assign orders to workers and allow them to update their
-                        task and order status.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Media Management</h3>
-                    <p>
-                        Store design references and proof-of-work images using
-                        cloud-based media storage.
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-        <section>
-            <h2>System Users</h2>
-
-            <div class="grid">
-
-                <div class="card">
-                    <h3>Customer</h3>
-                    <ul>
-                        <li>Place tailoring orders</li>
-                        <li>Save measurements</li>
-                        <li>Track order progress</li>
-                        <li>View design references</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h3>Worker</h3>
-                    <ul>
-                        <li>View assigned tasks</li>
-                        <li>Manage task queue</li>
-                        <li>Update order status</li>
-                        <li>Upload work updates</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h3>Administrator</h3>
-                    <ul>
-                        <li>Manage customers and orders</li>
-                        <li>Manage workers</li>
-                        <li>Assign tasks</li>
-                        <li>Monitor shop operations</li>
-                    </ul>
-                </div>
-
-            </div>
-        </section>
-
-        <section>
-            <h2>Technology Stack</h2>
-
-            <div class="grid">
-
-                <div class="card">
-                    <h3>Frontend</h3>
-                    <p>HTML, CSS, Bootstrap and jQuery</p>
-                </div>
-
-                <div class="card">
-                    <h3>Backend</h3>
-                    <p>Node.js</p>
-                </div>
-
-                <div class="card">
-                    <h3>Media Storage</h3>
-                    <p>Cloudinary</p>
-                </div>
-
-                <div class="card">
-                    <h3>Database</h3>
-                    <p>Aiven Cloud Database</p>
-                </div>
-
-            </div>
-        </section>
-
-        <section>
-            <h2>Project Goal</h2>
-
-            <p>
-                The main goal of StitchPerfect is to bring traditional tailor
-                shop operations into a more organized digital environment.
-                By centralizing measurements, orders, worker tasks, and design
-                references, the system can help improve efficiency and provide
-                better visibility throughout the tailoring process.
-            </p>
-        </section>
-
-        <section>
-            <h2>Project Information</h2>
-
-            <p><strong>Project:</strong> StitchPerfect</p>
-            <p><strong>Course:</strong> UCS503 - Software Engineering Project</p>
-            <p><strong>Author:</strong> Uday Singh</p>
-            <p><strong>Roll Number:</strong> 1024160031</p>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>StitchPerfect - Digital Tailor Shop Management System</p>
-    </footer>
-
-</body>
-
-</html>
+    </div>
+</section>
