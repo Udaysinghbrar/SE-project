@@ -1,0 +1,370 @@
+\documentclass[12pt,a4paper]{report}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+
+% ==================================================
+% TITLE PAGE
+% ==================================================
+
+\title{StitchPerfect}
+\author{\texttt{1024160031} Uday Singh}
+\date{Project Evaluation\\[0.2cm]
+Computer Engineering Department\\[0.2cm]
+Thapar Institute of Engineering and Technology, Patiala}
+
+% ==================================================
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+% ==================================================
+% CHAPTER 1
+% ==================================================
+
+\chapter{Introduction}
+
+\section{Background and Context}
+
+Tailoring businesses handle a large amount of customer information, including
+customer details, body measurements, clothing orders, and measurement history.
+When these records are maintained manually, it can become difficult to retrieve
+old measurements, update customer information, track orders, and maintain
+accurate records.
+
+The proposed StitchPerfect provides a
+centralized software solution for managing these activities. The system allows
+the administrator to store and manage customer information, body measurements,
+and order records through a graphical user interface.
+
+An additional feature of the system is an automatic measurement prediction
+module. Given basic inputs such as height and weight, the system uses a
+measurement dataset containing approximately 10,000 records to estimate
+multiple body measurements. This can assist the tailor in obtaining an initial
+set of measurements before manually verifying them.
+
+\section{Problem Statement}
+
+Traditional tailoring workflows often depend on handwritten registers or
+separate records. Such approaches can result in duplicated information,
+difficulty in searching previous records, errors while copying measurements,
+and inefficient order management.
+
+The project addresses these problems by developing an integrated application
+that stores customer and tailoring records in a database and provides
+functionality for adding, viewing, updating, and managing these records.
+Furthermore, the system introduces an automated prediction feature that uses
+height and weight as inputs to estimate body measurements.
+
+\section{Project Objectives}
+
+The main objectives of the project are:
+
+\begin{enumerate}
+  \item To develop a centralized system for managing customer information.
+  \item To store and manage body measurements digitally.
+  \item To maintain tailoring order records in a structured database.
+  \item To provide CRUD functionality for the major system entities.
+  \item To develop an automatic body-measurement prediction feature using
+        height and weight.
+  \item To use a measurement dataset of approximately 10,000 rows for the
+        prediction component.
+  \item To provide a simple graphical interface that can be used efficiently
+        by a tailor or administrator.
+\end{enumerate}
+
+\section{Scope of the Project}
+
+The system focuses on the management of customers, measurements, and orders
+within a tailoring environment. The administrator is the primary user who
+enters and manages records.
+
+The prediction component is intended to provide estimated measurements from
+basic physical inputs. The predicted values can be reviewed and verified by
+the tailor before being used for actual garment preparation.
+
+% ==================================================
+% CHAPTER 2
+% ==================================================
+
+\chapter{Methodology and Design}
+
+\section{System Architecture}
+
+The proposed system follows a layered application structure consisting of a
+graphical user interface, application logic, prediction functionality, and a
+database layer.
+
+The administrator interacts with the web interface. The application
+processes the entered information and performs the required database
+operations. Customer details, measurements, and order information are stored
+in MySQL. The prediction module receives height and weight and produces
+estimated measurement values using the prepared measurement dataset.
+
+\subsection{High-Level Design}
+
+The major components of the system are:
+
+\begin{itemize}
+  \item \textbf{Admin Interface:} Provides access to the management
+        functionality.
+  \item \textbf{Customer Management:} Handles customer records and their
+        associated information.
+  \item \textbf{Measurement Management:} Stores and retrieves body
+        measurements.
+  \item \textbf{Order Management:} Maintains tailoring order information.
+  \item \textbf{Measurement Predictor:} Estimates body measurements from
+        height and weight.
+  \item \textbf{Database Layer:} Stores persistent customer, measurement,
+        and order records using MySQL.
+\end{itemize}
+
+\subsection{Technical Stack}
+
+\begin{itemize}
+  \item \textbf{Frontend:} HTML, CSS, JavaScript and Bootstrap
+  \item \textbf{Backend:} Node.js and Express.js
+  \item \textbf{Database:} MySQL
+  \item \textbf{Database Connectivity:} MySQL driver for Node.js
+  \item \textbf{Prediction Component:} Body-measurement prediction model
+        based on a prepared measurement dataset
+  \item \textbf{Development Tools:} Visual Studio Code and Git
+\end{itemize}
+
+\section{Database Design}
+
+The database provides persistent storage for the system. The major logical
+entities are Customer, Measurement, and Order.
+
+\subsection{Customer Entity}
+
+The Customer entity stores information required to identify and manage a
+customer. A customer can have measurement records and multiple order records
+over time.
+
+\subsection{Measurement Entity}
+
+The Measurement entity stores body measurements required for tailoring. The
+system can maintain measurements such as:
+
+\begin{itemize}
+  \item Chest
+  \item Waist
+  \item Hips
+  \item Shoulder
+  \item Sleeve
+  \item Inseam
+  \item Neck
+\end{itemize}
+
+Additional measurement attributes can be included according to the final
+database design of the project.
+
+\subsection{Order Entity}
+
+The Order entity stores information related to garments ordered by a
+customer. It can be used to track the order and associate it with the
+corresponding customer and measurements.
+
+\section{Implementation Details}
+
+\subsection{Customer Management Module}
+
+The customer management module allows the administrator to enter customer
+details and maintain existing records. CRUD operations are used to create,
+retrieve, update, and delete records as required.
+
+\subsection{Measurement Management Module}
+
+The measurement management module provides facilities for recording and
+retrieving customer measurements. Measurements can be associated with the
+corresponding customer so that previous records can be accessed when
+required.
+
+\subsection{Order Management Module}
+
+The order management module maintains tailoring orders and their associated
+customer information. This helps the administrator keep track of the work
+that has been requested for each customer.
+
+\subsection{Automatic Measurement Prediction}
+
+The prediction module is designed to estimate body measurements using basic
+inputs, particularly height and weight. The system uses a prepared dataset
+containing approximately 10,000 measurement records.
+
+The prediction workflow is:
+
+\begin{enumerate}
+  \item The administrator enters the customer's height and weight.
+  \item The prediction component processes these input values.
+  \item The trained or prepared prediction logic estimates the required body
+        measurements.
+  \item The predicted measurements are displayed to the administrator.
+  \item The administrator can verify the values before using them for
+        tailoring.
+\end{enumerate}
+
+The prediction feature is intended as an assistance mechanism rather than a
+replacement for physical measurement and professional verification.
+
+\section{System Workflow}
+
+The general workflow of the application is:
+
+\begin{enumerate}
+  \item Administrator opens the application.
+  \item Customer information is entered or an existing customer is selected.
+  \item Measurements can be entered manually or estimated using the
+        prediction feature.
+  \item Measurement records are stored in the database.
+  \item An order is created and associated with the customer.
+  \item The stored information can later be retrieved and updated.
+\end{enumerate}
+
+% ==================================================
+% CHAPTER 3
+% ==================================================
+
+\chapter{Results and Evaluation}
+
+\section{Testing Methodology}
+
+The system can be evaluated through functional and integration testing of its
+major modules.
+
+\begin{itemize}
+  \item \textbf{Customer Testing:} Verify creation, retrieval, modification,
+        and deletion of customer records.
+  \item \textbf{Measurement Testing:} Verify that measurement records are
+        stored and retrieved correctly.
+  \item \textbf{Order Testing:} Verify that orders are correctly associated
+        with customers.
+  \item \textbf{Database Testing:} Verify successful insertion, retrieval,
+        updating, and deletion of database records.
+  \item \textbf{Prediction Testing:} Verify that height and weight inputs
+        produce measurement estimates.
+  \item \textbf{Integration Testing:} Verify communication between the
+        web interface, application logic, prediction component, and
+        MySQL database.
+\end{itemize}
+
+\section{Functional Results}
+
+The completed system is designed to provide a single interface through which
+the administrator can manage the major tailoring activities.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4cm}|p{8cm}|}
+  \hline
+  \textbf{Module} & \textbf{Expected Result} \\
+  \hline
+  Customer Management & Customer records can be added, viewed, updated,
+  and deleted. \\
+  \hline
+  Measurement Management & Body measurements can be stored and retrieved
+  for customers. \\
+  \hline
+  Order Management & Tailoring orders can be created and associated with
+  customers. \\
+  \hline
+  Prediction Module & Height and weight can be used to generate estimated
+  body measurements. \\
+  \hline
+  Database & Records remain available after being stored in MySQL. \\
+  \hline
+\end{tabular}
+\caption{Functional Results Summary}
+\label{tab:functional-results}
+\end{table}
+
+\section{Prediction Dataset}
+
+The prediction component uses a body-measurement dataset containing
+approximately 10,000 rows. The dataset provides reference examples for
+estimating body measurements from input characteristics.
+
+The final report should include the exact prediction-model metrics, dataset
+statistics, and validation results obtained during implementation. These
+values should be inserted after the final model has been evaluated.
+
+\section{Analysis}
+
+The system combines traditional record management with an automated
+prediction feature. Centralized database storage improves the organization
+and retrieval of customer information, while the prediction component can
+reduce the effort required to obtain an initial measurement estimate.
+
+The predicted measurements should always be reviewed by the tailor because
+body measurements can vary between individuals even when their height and
+weight are similar.
+
+% ==================================================
+% CHAPTER 4
+% ==================================================
+
+\chapter{Conclusion}
+
+\section{Summary of Work}
+
+The StitchPerfect provides a digital
+solution for managing customer information, measurements, and tailoring
+orders. The application uses a web interface and MySQL database to provide
+structured storage and management of records.
+
+The project also incorporates an automated measurement prediction component
+that uses height and weight as inputs and a large body-measurement dataset as
+the reference for generating estimated measurements.
+
+\section{Key Findings}
+
+\begin{itemize}
+  \item A centralized database can simplify the management of tailoring
+        records.
+  \item Digital measurement records make previously stored customer
+        information easier to retrieve and update.
+  \item Automated prediction can provide an initial estimate of body
+        measurements from basic inputs.
+  \item Prediction results require verification before being used for actual
+        garment production.
+\end{itemize}
+
+\section{Future Work and Recommendations}
+
+Possible future improvements include:
+
+\begin{enumerate}
+  \item Improving the prediction model by using a larger and more diverse
+        measurement dataset.
+  \item Adding additional input features to improve measurement estimates.
+  \item Adding authentication and role-based access control.
+  \item Adding customer order status and notification functionality.
+  \item Providing invoice and bill generation.
+  \item Adding measurement history and comparison features.
+  \item Developing a web or mobile version of the system.
+  \item Evaluating multiple machine-learning algorithms and comparing their
+        performance using suitable metrics.
+\end{enumerate}
+
+\section{Final Remarks}
+
+The project demonstrates how software engineering, database management,
+graphical user interfaces, and predictive techniques can be combined to
+digitize a traditional tailoring workflow. The system provides a foundation
+for further automation and can be extended with additional management and
+prediction capabilities.
+
+% ==================================================
+% BIBLIOGRAPHY
+% ==================================================
+
+
+
+\end{document}
