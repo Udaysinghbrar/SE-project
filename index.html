@@ -1,31 +1,193 @@
-<section>
-    <h2>Key Features</h2>
+# StitchPerfect — AI-Powered Tailor Management System
 
-    <div class="grid">
+## Overview
 
-        <div class="card">
-            <h3>Customer Management</h3>
-            <p>
-                Store customer details and measurements for easier
-                management and repeat orders.
-            </p>
-        </div>
+**StitchPerfect** is an AI-powered tailor management system designed to simplify and digitize the traditional tailoring workflow. The system allows a tailor/admin to manage customer measurements, orders, records, and inventory from a centralized platform.
 
-        <div class="card">
-            <h3>Order Management</h3>
-            <p>
-                Create orders, store measurements, and track the progress
-                of tailoring work.
-            </p>
-        </div>
+The main feature of StitchPerfect is an **AI-based measurement prediction system** that predicts tailoring measurements using basic inputs such as **height and weight**. This helps reduce manual measurement work and provides quick measurement estimates.
 
-        <div class="card">
-            <h3>Worker Management</h3>
-            <p>
-                Assign orders to workers and allow them to update their
-                task and order status.
-            </p>
-        </div>
+## Objectives
 
-    </div>
-</section>
+- Digitize traditional tailor management
+- Store customer and measurement records
+- Manage tailoring orders efficiently
+- Predict measurements using AI/ML
+- Reduce repetitive manual data entry
+- Provide easy access to previous customer records
+- Generate useful reports
+
+## Key Features
+
+### Customer Management
+
+- Add customer details
+- Update customer information
+- Maintain customer records
+
+### Measurement Management
+
+- Record customer measurements
+- Update existing measurements
+- Store measurements for future orders
+
+### AI Measurement Predictor
+
+- Takes basic inputs such as height and weight
+- Uses a trained ML model
+- Predicts required tailoring measurements
+- Helps reduce manual measurement entry
+
+### Order Management
+
+- Create new tailoring orders
+- Update order details
+- Track order information
+- Connect orders with customer measurements
+
+### Records and Reports
+
+- Search previous records
+- View customer history
+- View order information
+- Generate reports
+
+### Inventory Management
+
+- Manage tailoring-related inventory
+- Maintain available item records
+
+## System Architecture
+
+```text
+                ┌─────────────────────┐
+                │       Admin         │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │    Web Interface    │
+                │      Frontend       │
+                └──────────┬──────────┘
+                           │
+                           ▼
+                ┌─────────────────────┐
+                │    Backend API      │
+                │  Node.js + Express  │
+                └───────┬─────┬───────┘
+                        │     │
+             ┌──────────┘     └──────────┐
+             ▼                           ▼
+   ┌─────────────────┐          ┌─────────────────┐
+   │  AI Measurement │          │ MySQL Database  │
+   │    Predictor    │          │                 │
+   └─────────────────┘          └─────────────────┘
+```
+
+## Technology Stack
+
+| Component | Technology |
+|---|---|
+| Frontend | HTML, CSS, JavaScript |
+| Backend | Node.js, Express.js |
+| Database | MySQL |
+| AI/ML | Python, Scikit-learn |
+| Data Processing | Pandas, NumPy |
+| Version Control | Git & GitHub |
+
+## Basic Workflow
+
+```text
+Admin Login
+     ↓
+Open Dashboard
+     ↓
+Enter Customer Details
+     ↓
+Enter Measurements
+     ↓
+Use AI Predictor
+     ↓
+Review Predicted Measurements
+     ↓
+Save Measurements
+     ↓
+Create / Update Order
+     ↓
+Store Data in MySQL
+     ↓
+View Records / Reports
+```
+
+## AI Prediction Workflow
+
+```text
+Height + Weight
+      ↓
+Preprocessing
+      ↓
+Trained ML Model
+      ↓
+Predicted Measurements
+      ↓
+Admin Verification
+      ↓
+Save Measurements
+```
+
+## Project Structure
+
+```text
+StitchPerfect/
+│
+├── frontend/
+│   ├── index.html
+│   ├── css/
+│   └── js/
+│
+├── backend/
+│   ├── server.js
+│   ├── routes/
+│   └── controllers/
+│
+├── ml/
+│   ├── dataset/
+│   ├── training/
+│   └── model/
+│
+├── database/
+│   └── schema.sql
+│
+├── docs/
+│   └── diagrams/
+│
+└── README.md
+```
+
+## System Diagrams
+
+The project includes:
+
+- Activity Diagram
+- Swimlane Diagram
+- Data Flow Diagram (DFD)
+- ER Diagram
+- System Architecture Diagram
+
+## Future Scope
+
+- Mobile application
+- Online customer access
+- Automated order notifications
+- More advanced measurement prediction
+- Measurement recommendations based on previous orders
+- AI-assisted fabric and style recommendations
+- Cloud deployment
+
+## Developer
+
+**Uday Singh**  
+Thapar Institute of Engineering and Technology, Patiala
+
+## Project
+
+**StitchPerfect — AI-Powered Tailor Management System**
