@@ -1,102 +1,336 @@
-# StitchPerfect — AI-Powered Tailor Management System
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StitchPerfect | Project Overview</title>
 
-## Overview
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-**StitchPerfect** is an AI-powered tailor management system designed to simplify and digitize the traditional tailoring workflow. The system allows a tailor/admin to manage customer measurements, orders, records, and inventory from a centralized platform.
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.6;
+        }
 
-The main feature of StitchPerfect is an **AI-based measurement prediction system** that predicts tailoring measurements using basic inputs such as **height and weight**. This helps reduce manual measurement work and provides quick measurement estimates.
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
 
-## Objectives
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
 
-- Digitize traditional tailor management
-- Store customer and measurement records
-- Manage tailoring orders efficiently
-- Predict measurements using AI/ML
-- Reduce repetitive manual data entry
-- Provide easy access to previous customer records
-- Generate useful reports
+        header p {
+            font-size: 18px;
+            color: #d1d5db;
+        }
 
-## Key Features
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
 
-### Customer Management
+        section {
+            background: white;
+            padding: 35px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
 
-- Add customer details
-- Update customer information
-- Maintain customer records
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #111827;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
 
-### Measurement Management
+        h3 {
+            font-size: 20px;
+            margin: 20px 0 10px;
+            color: #374151;
+        }
 
-- Record customer measurements
-- Update existing measurements
-- Store measurements for future orders
+        ul {
+            padding-left: 25px;
+        }
 
-### AI Measurement Predictor
+        li {
+            margin-bottom: 8px;
+        }
 
-- Takes basic inputs such as height and weight
-- Uses a trained ML model
-- Predicts required tailoring measurements
-- Helps reduce manual measurement entry
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
 
-### Order Management
+        .feature {
+            background: #f9fafb;
+            padding: 22px;
+            border-radius: 10px;
+            border: 1px solid #e5e7eb;
+        }
 
-- Create new tailoring orders
-- Update order details
-- Track order information
-- Connect orders with customer measurements
+        .feature h3 {
+            margin-top: 0;
+        }
 
-### Records and Reports
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
 
-- Search previous records
-- View customer history
-- View order information
-- Generate reports
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
 
-### Inventory Management
+        th {
+            background: #f3f4f6;
+        }
 
-- Manage tailoring-related inventory
-- Maintain available item records
+        .architecture,
+        .workflow {
+            background: #111827;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
 
-## System Architecture
+        pre {
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
 
-```text
-                ┌─────────────────────┐
-                │       Admin         │
-                └──────────┬──────────┘
-                           │
-                           ▼
-                ┌─────────────────────┐
-                │    Web Interface    │
-                │      Frontend       │
-                └──────────┬──────────┘
-                           │
-                           ▼
-                ┌─────────────────────┐
-                │    Backend API      │
-                │  Node.js + Express  │
-                └───────┬─────┬───────┘
-                        │     │
-             ┌──────────┘     └──────────┐
-             ▼                           ▼
-   ┌─────────────────┐          ┌─────────────────┐
-   │  AI Measurement │          │ MySQL Database  │
-   │    Predictor    │          │                 │
-   └─────────────────┘          └─────────────────┘
-```
+        .developer {
+            text-align: center;
+        }
 
-## Technology Stack
+        footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+        }
 
-| Component | Technology |
-|---|---|
-| Frontend | HTML, CSS, JavaScript |
-| Backend | Node.js, Express.js |
-| Database | MySQL |
-| AI/ML | Python, Scikit-learn |
-| Data Processing | Pandas, NumPy |
-| Version Control | Git & GitHub |
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 32px;
+            }
 
-## Basic Workflow
+            section {
+                padding: 22px;
+            }
 
-```text
+            .container {
+                width: 94%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>StitchPerfect</h1>
+    <p>AI-Powered Tailor Management System</p>
+</header>
+
+<div class="container">
+
+    <section>
+        <h2>Overview</h2>
+
+        <p>
+            StitchPerfect is an AI-powered tailor management system designed
+            to simplify and digitize the traditional tailoring workflow.
+            The system allows a tailor or admin to manage customer
+            measurements, orders, records, and inventory from a centralized
+            platform.
+        </p>
+
+        <p>
+            The main feature of StitchPerfect is an AI-based measurement
+            prediction system that predicts tailoring measurements using
+            basic inputs such as height and weight. This helps reduce
+            manual measurement work and provides quick measurement estimates.
+        </p>
+    </section>
+
+    <section>
+        <h2>Objectives</h2>
+
+        <ul>
+            <li>Digitize traditional tailor management</li>
+            <li>Store customer and measurement records</li>
+            <li>Manage tailoring orders efficiently</li>
+            <li>Predict measurements using AI/ML</li>
+            <li>Reduce repetitive manual data entry</li>
+            <li>Provide easy access to previous customer records</li>
+            <li>Generate useful reports</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Key Features</h2>
+
+        <div class="features">
+
+            <div class="feature">
+                <h3>Customer Management</h3>
+                <ul>
+                    <li>Add customer details</li>
+                    <li>Update customer information</li>
+                    <li>Maintain customer records</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h3>Measurement Management</h3>
+                <ul>
+                    <li>Record customer measurements</li>
+                    <li>Update existing measurements</li>
+                    <li>Store measurements for future orders</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h3>AI Measurement Predictor</h3>
+                <ul>
+                    <li>Accept height and weight</li>
+                    <li>Use a trained ML model</li>
+                    <li>Predict required measurements</li>
+                    <li>Reduce manual measurement entry</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h3>Order Management</h3>
+                <ul>
+                    <li>Create tailoring orders</li>
+                    <li>Update order details</li>
+                    <li>Track order information</li>
+                    <li>Connect orders with measurements</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h3>Records and Reports</h3>
+                <ul>
+                    <li>Search previous records</li>
+                    <li>View customer history</li>
+                    <li>View order information</li>
+                    <li>Generate reports</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h3>Inventory Management</h3>
+                <ul>
+                    <li>Manage tailoring inventory</li>
+                    <li>Maintain available item records</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>System Architecture</h2>
+
+        <div class="architecture">
+<pre>
+                    ┌─────────────────────┐
+                    │       Admin         │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │    Web Interface    │
+                    │      Frontend       │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │    Backend API      │
+                    │  Node.js + Express  │
+                    └───────┬─────┬───────┘
+                            │     │
+                 ┌──────────┘     └──────────┐
+                 ▼                           ▼
+       ┌─────────────────┐          ┌─────────────────┐
+       │  AI Measurement │          │ MySQL Database  │
+       │    Predictor    │          │                 │
+       └─────────────────┘          └─────────────────┘
+</pre>
+        </div>
+    </section>
+
+    <section>
+        <h2>Technology Stack</h2>
+
+        <table>
+            <tr>
+                <th>Component</th>
+                <th>Technology</th>
+            </tr>
+
+            <tr>
+                <td>Frontend</td>
+                <td>HTML, CSS, JavaScript</td>
+            </tr>
+
+            <tr>
+                <td>Backend</td>
+                <td>Node.js, Express.js</td>
+            </tr>
+
+            <tr>
+                <td>Database</td>
+                <td>MySQL</td>
+            </tr>
+
+            <tr>
+                <td>AI/ML</td>
+                <td>Python, Scikit-learn</td>
+            </tr>
+
+            <tr>
+                <td>Data Processing</td>
+                <td>Pandas, NumPy</td>
+            </tr>
+
+            <tr>
+                <td>Version Control</td>
+                <td>Git & GitHub</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Basic Workflow</h2>
+
+        <div class="workflow">
+<pre>
 Admin Login
      ↓
 Open Dashboard
@@ -116,11 +350,15 @@ Create / Update Order
 Store Data in MySQL
      ↓
 View Records / Reports
-```
+</pre>
+        </div>
+    </section>
 
-## AI Prediction Workflow
+    <section>
+        <h2>AI Prediction Workflow</h2>
 
-```text
+        <div class="workflow">
+<pre>
 Height + Weight
       ↓
 Preprocessing
@@ -132,11 +370,15 @@ Predicted Measurements
 Admin Verification
       ↓
 Save Measurements
-```
+</pre>
+        </div>
+    </section>
 
-## Project Structure
+    <section>
+        <h2>Project Structure</h2>
 
-```text
+        <div class="workflow">
+<pre>
 StitchPerfect/
 │
 ├── frontend/
@@ -161,33 +403,48 @@ StitchPerfect/
 │   └── diagrams/
 │
 └── README.md
-```
+</pre>
+        </div>
+    </section>
 
-## System Diagrams
+    <section>
+        <h2>System Diagrams</h2>
 
-The project includes:
+        <ul>
+            <li>Activity Diagram</li>
+            <li>Swimlane Diagram</li>
+            <li>Data Flow Diagram (DFD)</li>
+            <li>ER Diagram</li>
+            <li>System Architecture Diagram</li>
+        </ul>
+    </section>
 
-- Activity Diagram
-- Swimlane Diagram
-- Data Flow Diagram (DFD)
-- ER Diagram
-- System Architecture Diagram
+    <section>
+        <h2>Future Scope</h2>
 
-## Future Scope
+        <ul>
+            <li>Mobile application</li>
+            <li>Online customer access</li>
+            <li>Automated order notifications</li>
+            <li>More advanced measurement prediction</li>
+            <li>Measurement recommendations based on previous orders</li>
+            <li>AI-assisted fabric and style recommendations</li>
+            <li>Cloud deployment</li>
+        </ul>
+    </section>
 
-- Mobile application
-- Online customer access
-- Automated order notifications
-- More advanced measurement prediction
-- Measurement recommendations based on previous orders
-- AI-assisted fabric and style recommendations
-- Cloud deployment
+    <section class="developer">
+        <h2>Developer</h2>
 
-## Developer
+        <p><strong>Uday Singh</strong></p>
+        <p>Thapar Institute of Engineering and Technology, Patiala</p>
+    </section>
 
-**Uday Singh**  
-Thapar Institute of Engineering and Technology, Patiala
+</div>
 
-## Project
+<footer>
+    <p>StitchPerfect — AI-Powered Tailor Management System</p>
+</footer>
 
-**StitchPerfect — AI-Powered Tailor Management System**
+</body>
+</html>
