@@ -58,16 +58,18 @@
 
 ---
 
-## Week 6 (Sep 7 - Sep 13): Frontend Completion & Backend Planning
-
+## Week 6 (Sep 7 - Sep 13): Frontend Completion, Prediction Model & Backend Planning
 - Completed the major frontend implementation of the StitchPerfect website.
 - Finalized the interfaces for customers, workers, and administrators.
 - Refined the order and measurement workflows and improved the overall UI consistency.
 - Integrated the planned frontend structure with the system design and DFD workflow.
+- Developed the Measurement Prediction Model to automatically predict body measurements using height and weight as input parameters.
+- Prepared and used a 10,000-row anthropometric dataset containing height, weight, chest, waist, hips, shoulder, sleeve, inseam, and neck measurements for model training.
+- Implemented the prediction workflow for automatically estimating required tailoring measurements from the user's height and weight.
 - Reviewed the complete frontend implementation and identified areas requiring backend integration.
 - Started planning the backend implementation, including API structure, database connectivity, authentication, and data handling.
 - Backend development is planned as the next phase of the project.
-
+- Added activity selection diagram
 ---
 
 ## Current Project Status
